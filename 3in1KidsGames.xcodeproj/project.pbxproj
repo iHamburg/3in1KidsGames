@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		26E1663D18025E2C004A9412 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E1663C18025E2C004A9412 /* Images.xcassets */; };
 		26E1663E1802A169004A9412 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E1663C18025E2C004A9412 /* Images.xcassets */; };
+		26FA3353180434800028F104 /* Default@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 26FA3351180434800028F104 /* Default@2x~ipad.png */; };
+		26FA3354180434800028F104 /* Default@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 26FA3351180434800028F104 /* Default@2x~ipad.png */; };
+		26FA3355180434800028F104 /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 26FA3352180434800028F104 /* Default~ipad.png */; };
+		26FA3356180434800028F104 /* Default~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 26FA3352180434800028F104 /* Default~ipad.png */; };
+		26FA335A180436820028F104 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA3359180436820028F104 /* libFlurry.a */; };
+		26FA335B180436820028F104 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA3359180436820028F104 /* libFlurry.a */; };
+		26FA335D180437640028F104 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA335C180437640028F104 /* Security.framework */; };
+		26FA335E1804376B0028F104 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA335C180437640028F104 /* Security.framework */; };
+		26FA3362180438390028F104 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA3361180438390028F104 /* SystemConfiguration.framework */; };
+		26FA336318043B2B0028F104 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA3361180438390028F104 /* SystemConfiguration.framework */; };
+		26FA337318043E620028F104 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA336F18043E620028F104 /* libGoogleAdMobAds.a */; };
+		26FA337418043E620028F104 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA336F18043E620028F104 /* libGoogleAdMobAds.a */; };
+		26FA337518043E620028F104 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26FA337018043E620028F104 /* README.txt */; };
+		26FA337618043E620028F104 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26FA337018043E620028F104 /* README.txt */; };
+		26FA337718043E620028F104 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FA337218043E620028F104 /* AdView.m */; };
+		26FA337818043E620028F104 /* AdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FA337218043E620028F104 /* AdView.m */; };
 		57141AE9158B643B00BDBC91 /* XCNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57141AE8158B643B00BDBC91 /* XCNumberView.m */; };
 		57141AEC158B6CC300BDBC91 /* XCColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57141AEB158B6CC300BDBC91 /* XCColorView.m */; };
 		57141AEF158B70DD00BDBC91 /* XCShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57141AEE158B70DD00BDBC91 /* XCShapeView.m */; };
@@ -1091,8 +1107,6 @@
 		AFEC579415A49AA30006D696 /* MoreAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEC579115A49AA30006D696 /* MoreAppViewController.m */; };
 		AFEC579515A49AA30006D696 /* MoreAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEC579215A49AA30006D696 /* MoreAppViewController.xib */; };
 		AFEC579615A49AA30006D696 /* MoreAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEC579215A49AA30006D696 /* MoreAppViewController.xib */; };
-		AFEC57A015A49F7A0006D696 /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEC579F15A49F7A0006D696 /* libFlurryAnalytics.a */; };
-		AFEC57A115A49F7A0006D696 /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEC579F15A49F7A0006D696 /* libFlurryAnalytics.a */; };
 		AFEC57A315A4B0830006D696 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEC57A215A4B0830006D696 /* Twitter.framework */; };
 		AFEC57A415A4B08B0006D696 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEC57A215A4B0830006D696 /* Twitter.framework */; };
 		AFEC57B915A4B8550006D696 /* View_Info_backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEC57A915A4B8550006D696 /* View_Info_backBtn.png */; };
@@ -1173,6 +1187,26 @@
 
 /* Begin PBXFileReference section */
 		26E1663C18025E2C004A9412 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "../../3in1KidsGames Pro/Images.xcassets"; sourceTree = "<group>"; };
+		26FA3351180434800028F104 /* Default@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x~ipad.png"; sourceTree = "<group>"; };
+		26FA3352180434800028F104 /* Default~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~ipad.png"; sourceTree = "<group>"; };
+		26FA3358180436820028F104 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		26FA3359180436820028F104 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		26FA335C180437640028F104 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		26FA335F180437B50028F104 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		26FA3361180438390028F104 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		26FA336618043E620028F104 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		26FA336718043E620028F104 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		26FA336818043E620028F104 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		26FA336918043E620028F104 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		26FA336A18043E620028F104 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		26FA336B18043E620028F104 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		26FA336C18043E620028F104 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		26FA336D18043E620028F104 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		26FA336E18043E620028F104 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		26FA336F18043E620028F104 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		26FA337018043E620028F104 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		26FA337118043E620028F104 /* AdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdView.h; sourceTree = "<group>"; };
+		26FA337218043E620028F104 /* AdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdView.m; sourceTree = "<group>"; };
 		57141AE7158B643B00BDBC91 /* XCNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCNumberView.h; sourceTree = "<group>"; };
 		57141AE8158B643B00BDBC91 /* XCNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCNumberView.m; sourceTree = "<group>"; };
 		57141AEA158B6CC300BDBC91 /* XCColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCColorView.h; sourceTree = "<group>"; };
@@ -1794,8 +1828,6 @@
 		AFEC579015A49AA30006D696 /* MoreAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreAppViewController.h; sourceTree = "<group>"; };
 		AFEC579115A49AA30006D696 /* MoreAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreAppViewController.m; sourceTree = "<group>"; };
 		AFEC579215A49AA30006D696 /* MoreAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreAppViewController.xib; sourceTree = "<group>"; };
-		AFEC579E15A49F7A0006D696 /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
-		AFEC579F15A49F7A0006D696 /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
 		AFEC57A215A4B0830006D696 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		AFEC57A915A4B8550006D696 /* View_Info_backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Info_backBtn.png; sourceTree = "<group>"; };
 		AFEC57AA15A4B8550006D696 /* View_Info_backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "View_Info_backBtn@2x.png"; sourceTree = "<group>"; };
@@ -1855,17 +1887,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26FA3362180438390028F104 /* SystemConfiguration.framework in Frameworks */,
+				26FA335E1804376B0028F104 /* Security.framework in Frameworks */,
 				AFB43E2515A9C2390095704C /* CoreImage.framework in Frameworks */,
 				AFEC57A315A4B0830006D696 /* Twitter.framework in Frameworks */,
 				AF0EEE80159F0F7A00114E67 /* StoreKit.framework in Frameworks */,
+				26FA335A180436820028F104 /* libFlurry.a in Frameworks */,
 				AF6E7CB5158FD1A400070AE7 /* MessageUI.framework in Frameworks */,
 				AF6E7CB2158FD18F00070AE7 /* AVFoundation.framework in Frameworks */,
 				5720361415890B7400C5906E /* AudioToolbox.framework in Frameworks */,
 				57FC42171583EF66001221F2 /* QuartzCore.framework in Frameworks */,
 				571FA8941581FB0E006A54CD /* UIKit.framework in Frameworks */,
+				26FA337318043E620028F104 /* libGoogleAdMobAds.a in Frameworks */,
 				571FA8961581FB0E006A54CD /* Foundation.framework in Frameworks */,
 				571FA8981581FB0E006A54CD /* CoreGraphics.framework in Frameworks */,
-				AFEC57A015A49F7A0006D696 /* libFlurryAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1873,23 +1908,63 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26FA336318043B2B0028F104 /* SystemConfiguration.framework in Frameworks */,
+				26FA335D180437640028F104 /* Security.framework in Frameworks */,
 				AFB43E2315A9C2190095704C /* CoreImage.framework in Frameworks */,
 				AFEC57A415A4B08B0006D696 /* Twitter.framework in Frameworks */,
 				AF0EEE7F159F0F7200114E67 /* StoreKit.framework in Frameworks */,
+				26FA335B180436820028F104 /* libFlurry.a in Frameworks */,
 				AF51EE29159DF12E00675159 /* MessageUI.framework in Frameworks */,
 				AF51EE2A159DF12E00675159 /* AVFoundation.framework in Frameworks */,
 				AF51EE2B159DF12E00675159 /* AudioToolbox.framework in Frameworks */,
 				AF51EE2C159DF12E00675159 /* QuartzCore.framework in Frameworks */,
 				AF51EE2D159DF12E00675159 /* UIKit.framework in Frameworks */,
+				26FA337418043E620028F104 /* libGoogleAdMobAds.a in Frameworks */,
 				AF51EE2E159DF12E00675159 /* Foundation.framework in Frameworks */,
 				AF51EE2F159DF12E00675159 /* CoreGraphics.framework in Frameworks */,
-				AFEC57A115A49F7A0006D696 /* libFlurryAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26FA3357180436820028F104 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				26FA3358180436820028F104 /* Flurry.h */,
+				26FA3359180436820028F104 /* libFlurry.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
+		26FA336418043E620028F104 /* AdView */ = {
+			isa = PBXGroup;
+			children = (
+				26FA336518043E620028F104 /* Admob */,
+				26FA337118043E620028F104 /* AdView.h */,
+				26FA337218043E620028F104 /* AdView.m */,
+			);
+			path = AdView;
+			sourceTree = "<group>";
+		};
+		26FA336518043E620028F104 /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				26FA336618043E620028F104 /* GADAdMobExtras.h */,
+				26FA336718043E620028F104 /* GADAdNetworkExtras.h */,
+				26FA336818043E620028F104 /* GADAdSize.h */,
+				26FA336918043E620028F104 /* GADBannerView.h */,
+				26FA336A18043E620028F104 /* GADBannerViewDelegate.h */,
+				26FA336B18043E620028F104 /* GADInterstitial.h */,
+				26FA336C18043E620028F104 /* GADInterstitialDelegate.h */,
+				26FA336D18043E620028F104 /* GADRequest.h */,
+				26FA336E18043E620028F104 /* GADRequestError.h */,
+				26FA336F18043E620028F104 /* libGoogleAdMobAds.a */,
+				26FA337018043E620028F104 /* README.txt */,
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
 		57141AE6158B642000BDBC91 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1949,6 +2024,9 @@
 		571FA8921581FB0E006A54CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				26FA3361180438390028F104 /* SystemConfiguration.framework */,
+				26FA335F180437B50028F104 /* CFNetwork.framework */,
+				26FA335C180437640028F104 /* Security.framework */,
 				AFB43E2215A9C2190095704C /* CoreImage.framework */,
 				AFEC57A215A4B0830006D696 /* Twitter.framework */,
 				AF0EEE7E159F0F7200114E67 /* StoreKit.framework */,
@@ -2329,21 +2407,22 @@
 		AF1346E4158FCE690053BFF2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				26FA336418043E620028F104 /* AdView */,
+				AF134705158FCE690053BFF2 /* Manager */,
+				26FA3357180436820028F104 /* Flurry */,
 				AFEC57D915A4CFDC0006D696 /* Facebook */,
-				AFEC579D15A49F7A0006D696 /* FlurryAnalytics */,
+				AF1346E5158FCE690053BFF2 /* Category */,
+				AF13471C158FCE690053BFF2 /* UtilityViews */,
 				AF0EEE7B159EFA1900114E67 /* MyStoreObserver.h */,
 				AF0EEE7C159EFA1900114E67 /* MyStoreObserver.m */,
-				AF1346E5158FCE690053BFF2 /* Category */,
 				AF134702158FCE690053BFF2 /* Category.h */,
 				AF134703158FCE690053BFF2 /* Constant.h */,
 				AF134704158FCE690053BFF2 /* Macros.h */,
-				AF134705158FCE690053BFF2 /* Manager */,
 				AF13470E158FCE690053BFF2 /* Manager.h */,
 				AF0881C615A579A40061E9EC /* Strings.h */,
 				AF13471A158FCE690053BFF2 /* Utilities.h */,
 				AF1E8EE115B6C421004C3F84 /* GlobalFunctions.h */,
 				AF1E8EE215B6C421004C3F84 /* GlobalFunctions.m */,
-				AF13471C158FCE690053BFF2 /* UtilityViews */,
 				AF134727158FCE690053BFF2 /* UtilityViews.h */,
 			);
 			path = Utilities;
@@ -2806,6 +2885,8 @@
 				AF71B6B215D486B3002D104D /* Default@2x.png */,
 				AF71B6B015D486AA002D104D /* Default.png */,
 				AF591F8715A4F25400934F82 /* Default-Landscape@2x~ipad.png */,
+				26FA3351180434800028F104 /* Default@2x~ipad.png */,
+				26FA3352180434800028F104 /* Default~ipad.png */,
 				AF591F8515A4F1E900934F82 /* Default-Landscape~ipad.png */,
 				57DE3E4215ACA29E002F1C8A /* sheep@2x.png */,
 				AF11999415AC687500603AFE /* View_IAP */,
@@ -2923,15 +3004,6 @@
 				AFE4671115A76EC70000EFAC /* Icon_Lock2x@.png */,
 			);
 			path = Icons;
-			sourceTree = "<group>";
-		};
-		AFEC579D15A49F7A0006D696 /* FlurryAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				AFEC579E15A49F7A0006D696 /* FlurryAnalytics.h */,
-				AFEC579F15A49F7A0006D696 /* libFlurryAnalytics.a */,
-			);
-			path = FlurryAnalytics;
 			sourceTree = "<group>";
 		};
 		AFEC57A815A4B8550006D696 /* View_Info */ = {
@@ -3099,6 +3171,7 @@
 				AFB601F015926CD50035D803 /* 7.mp3 in Resources */,
 				AFB601F115926CD50035D803 /* 8.mp3 in Resources */,
 				AFB601F215926CD50035D803 /* 9.mp3 in Resources */,
+				26FA337518043E620028F104 /* README.txt in Resources */,
 				AFB601F515926CD50035D803 /* BG_Blue.png in Resources */,
 				AFB601F615926CD50035D803 /* BG_ChooseNPlay.png in Resources */,
 				AFB601F715926CD50035D803 /* BG_ChooseNTest.png in Resources */,
@@ -3154,6 +3227,7 @@
 				AF8616CF1593A1400073AECC /* balloons_orange.png in Resources */,
 				AF8616D01593A1400073AECC /* balloons_violet.png in Resources */,
 				AF8616D11593A1400073AECC /* bear_with_balloons.png in Resources */,
+				26FA3355180434800028F104 /* Default~ipad.png in Resources */,
 				AF8616D21593A1400073AECC /* green_fields.png in Resources */,
 				AF8616D31593A1400073AECC /* rope.png in Resources */,
 				AF8616D41593A1400073AECC /* View_NCS_N_Learn_sky.jpg in Resources */,
@@ -3200,6 +3274,7 @@
 				AF0DC18D15971E45007DC60B /* yellow_banana.png in Resources */,
 				AF0DC18E15971E45007DC60B /* yellow_bucket.png in Resources */,
 				AF0DC18F15971E45007DC60B /* yellow_hand.png in Resources */,
+				26FA3353180434800028F104 /* Default@2x~ipad.png in Resources */,
 				AF0DC19015971E45007DC60B /* yellow_lemon.png in Resources */,
 				AF0DC19115971E45007DC60B /* yellow_pencil.png in Resources */,
 				AF0DC1A715972486007DC60B /* colorblue@2x.png in Resources */,
@@ -3786,6 +3861,7 @@
 				AF51EF72159DF12E00675159 /* triangle_cloud_big.png in Resources */,
 				AF51EF73159DF12E00675159 /* triangle_cloud_small.png in Resources */,
 				AF51EF74159DF12E00675159 /* triangle_comp0.png in Resources */,
+				26FA3354180434800028F104 /* Default@2x~ipad.png in Resources */,
 				AF51EF75159DF12E00675159 /* triangle_comp1.png in Resources */,
 				AF51EF76159DF12E00675159 /* triangle_comp2.png in Resources */,
 				AF51EF77159DF12E00675159 /* triangle_lion0.png in Resources */,
@@ -3801,6 +3877,7 @@
 				AFEC57C415A4B8550006D696 /* View_Info_cityquiz@2x.png in Resources */,
 				AFEC57C615A4B8550006D696 /* View_Info_email.png in Resources */,
 				AFEC57C815A4B8550006D696 /* View_Info_email@2x.png in Resources */,
+				26FA3356180434800028F104 /* Default~ipad.png in Resources */,
 				AFEC57CA15A4B8550006D696 /* View_Info_facebook.png in Resources */,
 				AFEC57CC15A4B8550006D696 /* View_Info_facebook@2x.png in Resources */,
 				AFEC57CE15A4B8550006D696 /* View_Info_followme.png in Resources */,
@@ -3841,6 +3918,7 @@
 				AF1321D815A6D1E30008B8C1 /* View_NCS_N_Learn_new@2x.jpg in Resources */,
 				AF1321E315A6D6000008B8C1 /* giftbox.png in Resources */,
 				AF1321E515A6D6000008B8C1 /* giftbox@2x.png in Resources */,
+				26FA337618043E620028F104 /* README.txt in Resources */,
 				AFE466F915A764D30000EFAC /* View_playmodus_N_BG.jpg in Resources */,
 				AFE466FB15A764D30000EFAC /* View_playmodus_N_BG@2x.jpg in Resources */,
 				AFE4671315A76EC70000EFAC /* back_yellow.png in Resources */,
@@ -4100,6 +4178,7 @@
 				AF13472E158FCE690053BFF2 /* UIColor+Extras.m in Sources */,
 				AF13472F158FCE690053BFF2 /* UIImage+Extras.m in Sources */,
 				AF134730158FCE690053BFF2 /* UINavigationBar+CustomBG.m in Sources */,
+				26FA337718043E620028F104 /* AdView.m in Sources */,
 				AF134731158FCE690053BFF2 /* UIPopoverController+Extras.m in Sources */,
 				AF134732158FCE690053BFF2 /* UIView+Extras.m in Sources */,
 				AF134733158FCE690053BFF2 /* UIViewController+Landscape.m in Sources */,
@@ -4187,6 +4266,7 @@
 				AF51EDFC159DF12E00675159 /* UIColor+Extras.m in Sources */,
 				AF51EDFD159DF12E00675159 /* UIImage+Extras.m in Sources */,
 				AF51EDFE159DF12E00675159 /* UINavigationBar+CustomBG.m in Sources */,
+				26FA337818043E620028F104 /* AdView.m in Sources */,
 				AF51EDFF159DF12E00675159 /* UIPopoverController+Extras.m in Sources */,
 				AF51EE00159DF12E00675159 /* UIView+Extras.m in Sources */,
 				AF51EE01159DF12E00675159 /* UIViewController+Landscape.m in Sources */,
@@ -4348,11 +4428,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/KidsLearn/Utilities/FlurryAnalytics\"",
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/Flurry,
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/AdView/Admob,
 				);
 				PRODUCT_NAME = X_KidsGames;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2323D5AE-17EB-4D10-81F5-4A645C5F64E5";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -4368,10 +4449,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/KidsLearn/Utilities/FlurryAnalytics\"",
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/Flurry,
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/AdView/Admob,
 				);
 				PRODUCT_NAME = "3in1 KidsGames";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4392,7 +4474,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/KidsLearn/Utilities/FlurryAnalytics\"",
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/Flurry,
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/AdView/Admob,
 				);
 				PRODUCT_NAME = KidsGames_FREE;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E0420BE7-9D6D-4D3B-AA93-F6C49A0441F0";
@@ -4412,7 +4495,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/KidsLearn/Utilities/FlurryAnalytics\"",
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/Flurry,
+					/Users/qing/Documents/iOSProject/3in1KidsGames/KidsLearn/Utilities/AdView/Admob,
 				);
 				PRODUCT_NAME = "3in1 KidsGames";
 				WRAPPER_EXTENSION = app;

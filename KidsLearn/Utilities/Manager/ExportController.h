@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <Twitter/Twitter.h>
 #import "Utilities.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 #import "LoadingView.h"
 
 @interface ExportController : NSObject<MFMailComposeViewControllerDelegate, UIAlertViewDelegate>{

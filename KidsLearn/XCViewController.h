@@ -49,8 +49,7 @@
 	IBOutlet UIButton *play;
 	IBOutlet UIButton *sprecherB;
 	IBOutlet Sprite *lion;
-    
-//    IBOutlet Spr
+
 	
 }
 

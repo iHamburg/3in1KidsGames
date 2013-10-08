@@ -16,9 +16,18 @@
 @synthesize viewController = _viewController;
 @synthesize facebook;
 
+#define kFlurryKey @"VDSJN9TZV25FQV28HP2Z" //iCA
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	
+#ifndef DEBUG
+    
+	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+	[Flurry startSession:kFlurryKey];  // 如果不是测试版本，激活flurry
+	
+#endif
+    
 	NSString *facebookSuffix = isPaid()?@"paid":@"free";
 	
 	NSLog(@"suffix:%@",facebookSuffix);
@@ -64,6 +73,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+#pragma mark - Flurry Error Handlung
+void uncaughtExceptionHandler(NSException *exception) {
+    [Flurry logError:@"Uncaught" message:@"Crash!" exception:exception];
+}
 
 
 #pragma mark - Facebook

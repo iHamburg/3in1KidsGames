@@ -107,9 +107,9 @@
 	
 	if (result == MFMailComposeResultSent) {
 		if(isPaid())
-			[FlurryAnalytics logEvent:@"Email Sent"];
+			[Flurry logEvent:@"Email Sent"];
 		else 
-			[FlurryAnalytics logEvent:@"Free Email Sent"];
+			[Flurry logEvent:@"Free Email Sent"];
 			
 		// if already sent 3 email, show rate
 		// if rate = -1->return
@@ -154,7 +154,7 @@
                 break;
             case TWTweetComposeViewControllerResultDone:
 				
-				[FlurryAnalytics logEvent:@"Tweet sent"];
+				[Flurry logEvent:@"Tweet sent"];
                 break;
             default:
                 break;
@@ -195,7 +195,7 @@
             case TWTweetComposeViewControllerResultDone:
                 // The tweet was sent.
 //                output = @"Tweet done.";
-				[FlurryAnalytics logEvent:@"Tweet sent"];
+//				[FlurryAnalytics logEvent:@"Tweet sent"];
                 break;
             default:
                 break;

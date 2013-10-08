@@ -15,7 +15,7 @@
 #import "Manager.h"
 
 #import "FBViewController.h" //Facebook
-#import "FlurryAnalytics.h"  //Flurry
+//#import "FlurryAnalytics.h"  //Flurry
 
 @interface Controller : NSObject{
 
