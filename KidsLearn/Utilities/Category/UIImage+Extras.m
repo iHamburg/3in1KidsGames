@@ -9,6 +9,8 @@
 #import "UIImage+Extras.h"
 #import "Macros.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NSString+Extras.h"
+
 
 static inline CGSize swapWidthAndHeight(CGSize size)
 {
@@ -50,33 +52,6 @@ static inline CGSize swapWidthAndHeight(CGSize size)
 //    CGContextClosePath(context);
 //    CGContextRestoreGState(context);
 //}
-
-//
-//+ (id) createRoundedRectImage:(UIImage*)image size:(CGSize)size
-//{
-//    // the size of CGContextRef
-//    int w = size.width;
-//    int h = size.height;
-//    
-//    UIImage *img = image;
-//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-//    CGContextRef context = CGBitmapContextCreate(NULL, w, h, 8, 4 * w, colorSpace, kCGImageAlphaPremultipliedFirst);
-//    CGRect rect = CGRectMake(0, 0, w, h);
-//    
-//    CGContextBeginPath(context);
-//   // addRoundedRectToPath(context, rect, 10, 10);
-//    addRoundedRectToPath(context, rect, 12, 12);
-//    CGContextClosePath(context);
-//    CGContextClip(context);
-//    CGContextDrawImage(context, CGRectMake(0, 0, w, h), img.CGImage);
-//    CGImageRef imageMasked = CGBitmapContextCreateImage(context);
-//    CGContextRelease(context);
-//    CGColorSpaceRelease(colorSpace);
-//    CGImageRelease(imageMasked);
-////    CGContextRelease(context);
-//
-//    return [UIImage imageWithCGImage:imageMasked];
-//}
 - (UIImage*)imageByScalingAndCroppingForSize:(CGSize)targetSize
 {
     UIImage *sourceImage = self;
@@ -115,8 +90,9 @@ static inline CGSize swapWidthAndHeight(CGSize size)
             }
     }       
     
-    UIGraphicsBeginImageContext(targetSize); // this will crop
-    
+//    UIGraphicsBeginImageContext(targetSize); // this will crop
+    UIGraphicsBeginImageContextWithOptions(targetSize, NO, 0);
+	
     CGRect thumbnailRect = CGRectZero;
     thumbnailRect.origin = thumbnailPoint;
     thumbnailRect.size.width  = scaledWidth;
@@ -142,6 +118,70 @@ static inline CGSize swapWidthAndHeight(CGSize size)
     CGSize targetSize = CGSizeMake(width, height);
 
     return [self imageByScalingAndCroppingForSize:targetSize];    
+}
+
+
+//960x640, min320->480x320,
+
+- (UIImage*)imageByScaleingWithMinLength:(CGFloat)minLength{
+	float scale = [UIScreen mainScreen].scale;
+	float width = self.size.width;
+    float height = self.size.height;
+	
+	
+	// 如果原图最小边*scale(像素)《maxLength*scale(像素)
+	if (MAX(width, height)*self.scale <= minLength*scale) {
+		
+		if (self.scale == scale) { //如果当前image的scale等于device的scale，不变形
+			return self;
+		}
+		else{// 否则把image的scale更新到device的scale
+			return [self imageByScalingAndCroppingForSize:CGSizeMake(width*self.scale/scale, height*self.scale/scale)];
+		}
+	}
+	
+	
+	CGSize size;
+	
+	
+	if (width>height) {
+		size = CGSizeMake(width/height*minLength, minLength);
+	}
+	else{
+		size = CGSizeMake(minLength, height/width*minLength);
+	}
+	return [self imageByScalingAndCroppingForSize:size];
+}
+
+
+// 960x640, max 480 ->480x320
+- (UIImage*)imageByScaleingWithMaxLength:(CGFloat)maxLength{
+	float scale = [UIScreen mainScreen].scale;
+	
+	float width = self.size.width;
+    float height = self.size.height;
+	
+	// 如果原图最小边*scale(像素)《maxLength*scale(像素)
+	if (MAX(width, height)*self.scale <= maxLength*scale) {
+		
+		if (self.scale == scale) { //如果当前image的scale等于device的scale，不变形
+			return self;
+		}
+		else{// 否则把image的scale更新到device的scale
+			return [self imageByScalingAndCroppingForSize:CGSizeMake(width*self.scale/scale, height*scale/scale)];
+		}
+	}
+	
+	CGSize size;
+	
+	
+	if (width<height) {
+		size = CGSizeMake(width/height*maxLength, maxLength);
+	}
+	else{
+		size = CGSizeMake(maxLength, height/width*maxLength);
+	}
+	return [self imageByScalingAndCroppingForSize:size];
 }
 
 
@@ -239,10 +279,247 @@ static inline CGSize swapWidthAndHeight(CGSize size)
 }
 
 + (UIImage*)imageWithView:(UIView*)view{
-	UIGraphicsBeginImageContext(view.bounds.size);
+    
+	UIGraphicsBeginImageContextWithOptions(view.bounds.size, 0, [[UIScreen mainScreen]scale]);
+    
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *aImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    
+	UIImage *aImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+	UIGraphicsEndImageContext();
+	
 	return aImage;
 }
+
+
++ (UIImage*)imageWithView:(UIView*)view scale:(CGFloat)scale{
+    
+    NSLog(@"view # %@",view);
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, 0, scale);
+    
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+	UIImage *aImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+	UIGraphicsEndImageContext();
+	
+	return aImage;
+}
+
++ (UIImage*)imageWithView:(UIView*)view faktor:(float)faktor{
+	CGSize originSize = view.bounds.size;
+	CGSize newSize = CGSizeMake(originSize.width * faktor, originSize.height * faktor);
+	
+	UIGraphicsBeginImageContext(newSize);
+    CGContextRef imageContext = UIGraphicsGetCurrentContext();
+	
+	
+	CGContextScaleCTM(imageContext, faktor, faktor);
+	
+	
+    [view.layer renderInContext: imageContext];
+    UIImage* viewImage = UIGraphicsGetImageFromCurrentImageContext();
+	
+    UIGraphicsEndImageContext();
+    return viewImage;
+	
+}
+
+
+// 图片都是～ipad和@2x～ipad，如果是iphone,没有ddd。png,只有ddd~ipad.png，img是nil,所以自动加上～ipad
++ (UIImage*)imageNamedUniversal:(NSString*)name{ //ddd.png
+	
+	UIImage *img = [UIImage imageNamed:name];
+	
+	if (!img) {
+		NSString *prefix = [name stringByDeletingPathExtension];
+//		NSLog(@"prefix:%@",prefix);
+	
+		NSString *extention = name.pathExtension;
+//		NSLog(@"extention:%@",extention);
+		
+		NSString *newImgName = [NSString stringWithFormat:@"%@~ipad.%@",prefix,extention];
+//		NSLog(@"new ImgName:%@",newImgName);
+		img = [UIImage imageNamed:newImgName];
+	}
+	
+	return img;
+}
+
+
++ (UIImage*)imageWithContentsOfFileUniversal:(NSString *)fileName{
+	NSString *prefix = [fileName stringByDeletingPathExtension];
+	NSString *extension = fileName.pathExtension;	
+	NSString *path = [[NSBundle mainBundle] pathForResource:prefix ofType:extension];
+
+//    NSLog(@"path # %@",path);
+	UIImage *img;
+	if (!path) {
+		prefix = [NSString stringWithFormat:@"%@~ipad",prefix];
+		
+		path = [[NSBundle mainBundle] pathForResource:prefix ofType:extension];
+	}
+//    NSLog(@"path # %@",path);
+	img = [UIImage imageWithContentsOfFile:path];
+//	NSLog(@"img # %@,scale # %f",NSStringFromCGSize(img.size),img.scale);
+//	if ( 1) {
+//		img = [img imageByScalingAndCroppingForSize:CGSizeMake(300, 200)];
+//	}
+	return img;
+	
+}
+
++ (UIImage*)imageWithContentsOfBundleFile:(NSString*)fileName{
+	NSString *bundlePath = [[[NSBundle mainBundle] resourcePath]stringByAppendingPathComponent:@"utilLib.bundle"];
+	NSString *imgPath = [bundlePath stringByAppendingPathComponent:@"images"];
+	return [UIImage imageWithContentsOfFile:[imgPath stringByAppendingPathComponent:fileName]];
+
+}
+
+
++ (UIImage*)imageWithContentsOfFileName:(NSString *)fileName{
+	
+	NSString *prefix = [fileName stringByDeletingPathExtension];
+	NSString *extension = fileName.pathExtension;
+	NSString *path = [[NSBundle mainBundle]pathForResource:prefix ofType:extension];
+	
+	UIImage *img = [UIImage imageWithContentsOfFile:path];
+	
+	
+	
+	return img;
+}
+
+/**
+ 
+ 用到了FileUniversal
+ 和CachesPath！！
+ 不保存到Document，而是保存到Cache！
+ */
+
++ (UIImage*)imageWithSystemName:(NSString*)fileName{
+	UIImage *img;
+	
+    img = [UIImage imageWithContentsOfFileUniversal:fileName];
+	
+//	NSLog(@"img is in bundle # %@",fileName);
+	
+	///如果不是bundle的图片，就从cache中找
+	
+//	if(!img){
+//		
+//		NSString *cacheFilePath = [NSString cachesPathForFileName:fileName];
+////		NSLog(@"cache filepath # %@",cacheFilePath);
+//		
+//		NSData *data = [NSData dataWithContentsOfFile:cacheFilePath];
+//		
+//		// 旧的版本没有的，上线就可以删除了！！
+//		if(!data){
+////			NSLog(@"caches image nil");
+//			data = [NSData dataWithContentsOfFile:[NSString dataFilePath:fileName]];
+//		}
+//		
+//		img = [UIImage imageWithData:data scale:[[UIScreen mainScreen]scale]];
+//		
+//		if (!img) {
+//			NSLog(@"image with system name load error # %@",fileName);
+//		}
+//	}
+//	
+	
+	return img;
+}
+
+
+//+ (UIImage*)imageWithCacheName:(NSString*)fileName{
+//    NSString *cacheFilePath = [NSString cachesPathForFileName:fileName];
+//    //		NSLog(@"cache filepath # %@",cacheFilePath);
+//    
+//    NSData *data = [NSData dataWithContentsOfFile:cacheFilePath];
+//    
+//    // 旧的版本没有的，上线就可以删除了！！
+//    if(!data){
+//        //			NSLog(@"caches image nil");
+//        data = [NSData dataWithContentsOfFile:[NSString dataFilePath:fileName]];
+//    }
+//    
+//    UIImage *img = [UIImage imageWithData:data scale:[[UIScreen mainScreen]scale]];
+//    
+//    if (!img) {
+//        NSLog(@"image with cache name load error # %@",fileName);
+//        img = [UIImage imageWithContentsOfFileUniversal:fileName];
+//    }
+//    
+//    return img;
+//
+//}
+#pragma mark - Save
+//
+//- (void)saveWithName:(NSString*)fileName{
+//	
+//    
+//    
+//	///
+//	NSData *data;
+//    UIImage *img;
+//    if (isPad && isRetina && NO) {
+//        img = [self imageByScalingAndCroppingForSize:CGSizeMake(1024/2, 768/2)];
+//    }
+//    else{
+//        img = self;
+//    }
+//    
+//    NSLog(@"img size # %@, scale # %f",NSStringFromCGSize(img.size),img.scale);
+//	if ([self hasAlpha]) {
+//		data = UIImagePNGRepresentation(img);
+//	}
+//	else{
+//		data = UIImageJPEGRepresentation(img, 0.8);
+//	}
+//
+//    
+//	
+//	NSString *filePath = [NSString cachesPathForFileName:fileName];
+//	BOOL successful = [data writeToFile:filePath atomically:YES];
+//	
+//	if (!successful) {
+//		NSLog(@"Error: save # %@ to %@ ",fileName,filePath);
+//	}
+//    
+//    NSLog(@"save image in path # %@",filePath);
+//	
+//}
+//
+
+#pragma mark - Draw
+- (UIImage*)imageByCroppedPath:(UIBezierPath*)path{
+    
+	/// 处理path的bounds超出self.bounds的情况
+    CGRect pathRect = path.bounds;
+    CGRect imgRect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGRect newPathRect = CGRectIntersection(pathRect, imgRect);
+  
+    UIGraphicsBeginImageContext(self.size);
+
+	CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(context);
+    
+    CGContextAddPath(context, path.CGPath);
+    CGContextClip(context);
+    
+    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
+
+	UIImage *img= UIGraphicsGetImageFromCurrentImageContext();
+	
+    CGContextRestoreGState(context);
+    UIGraphicsEndImageContext();
+    
+    CGImageRef drawImage = CGImageCreateWithImageInRect(img.CGImage, newPathRect);
+    UIImage *croppedImage = [UIImage imageWithCGImage:drawImage];
+	CGImageRelease(drawImage);
+	
+    return croppedImage;
+}
+
 @end

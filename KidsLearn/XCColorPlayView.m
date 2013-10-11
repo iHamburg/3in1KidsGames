@@ -15,7 +15,7 @@
 	
 	bgV.image = [UIImage imageNamed:@"View_NCS_C_Learn_BG.png"];
 	
-	indexButton = [UIButton buttonWithFrame:CGRectMake(460, 50, 106, 121) title:nil image:nil target:self actcion:@selector(buttonClicked:)];
+	indexButton = [UIButton buttonWithFrame:CGRectMake(460, 50, 106, 121) title:nil image:nil target:self action:@selector(buttonClicked:)];
 	originImages = [NSMutableArray array];
 	bwImages = [NSMutableArray array];
 	

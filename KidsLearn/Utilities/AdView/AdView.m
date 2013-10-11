@@ -7,30 +7,33 @@
 //
 
 #import "AdView.h"
-#import "ViewController.h"
+//#import "ViewController.h"
+#import "XCViewController.h"
+#import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Utilities.h"
+//#import "Macros.h"
 
 NSString *const NotificationAdChanged = @"ADChanged";
 
 @interface AdView()
 
-- (void)setupIAD;
+//- (void)setupIAD;
 - (void)setupGAD;
 
 @end
 
 @implementation AdView
 
-
-static bool _isIAD = NO;
-static bool _iadAvailable = NO;
-
 static bool _isGADLoaded = NO;
 
-static NSString *MY_BANNER_UNIT_ID=@"a15226a64014da4";   //iCA
+static NSString *MY_BANNER_UNIT_ID=@"a152540bc04ddfa";   // 3in1
+//static NSString *MY_BANNER_UNIT_ID=@"a15226a64014da4";   //iCA
 //static NSString *MY_BANNER_UNIT_ID=@"a1510c1a0d38138"; // Everalbum
 //static NSString *MY_BANNER_UNIT_ID=@"a1510e69df21727"; // TinyKitchen
 
+
+#define HBANNER (isPad?66:32)
 
 @synthesize isAdDisplaying;
 
@@ -40,15 +43,10 @@ static NSString *MY_BANNER_UNIT_ID=@"a15226a64014da4";   //iCA
     [[NSNotificationCenter defaultCenter]postNotificationName:NotificationAdChanged object:self];
 }
 
-- (BOOL)bannerLoaded{
-	if (_isIAD) {
-		return _iadView.bannerLoaded;
-	}
-	else{
-		return _isGADLoaded;
-	}
-    
-}
+//- (BOOL)bannerLoaded{
+//    return _isGADLoaded;
+//    
+//}
 
 #pragma mark -
 static id sharedInstance;
@@ -59,9 +57,12 @@ static id sharedInstance;
         return nil;
     }
     
+
     if (sharedInstance == nil) {
 		
-		sharedInstance = [[[self class] alloc]initWithFrame:CGRectMake(0, 0, _w, _hAdBanner)];
+		sharedInstance = [[[self class] alloc]initWithFrame:CGRectMake(0, _h - HBANNER, _w, HBANNER)];
+//        _hAdBanner = isPad?66:32;
+//        sharedInstance = [[[self class] alloc]initWithFrame:CGRectMake(0, 0, 1024, 66)];
 	}
 	
 	return sharedInstance;
@@ -91,43 +92,44 @@ static id sharedInstance;
 													 name:UIApplicationDidBecomeActiveNotification
 												   object:nil];
 
-		
-		static NSSet* supportedCountries = nil;
-		if (supportedCountries == nil)
-		{
-			supportedCountries = [NSSet setWithObjects:
-								  @"ES", // spain
-								  @"US", // usa
-								  @"UK", // united kingdom
-								  @"CA", // canada
-								  @"FR", // france
-								  @"DE", // german
-								  @"IT", // italy
-								  @"JP", // japan
-								  nil];
-		}
-		
-		NSLocale* currentLocale = [NSLocale currentLocale];  // get the current locale.
-		NSString* countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
-		NSLog(@"contryCode # %@",countryCode);
-		
-		if ([supportedCountries containsObject:countryCode]) {
-			_iadAvailable = YES;
-		}
-		else{
-			_iadAvailable = NO;
-		}
+//		
+//		static NSSet* supportedCountries = nil;
+//		if (supportedCountries == nil)
+//		{
+//			supportedCountries = [NSSet setWithObjects:
+//								  @"ES", // spain
+//								  @"US", // usa
+//								  @"UK", // united kingdom
+//								  @"CA", // canada
+//								  @"FR", // france
+//								  @"DE", // german
+//								  @"IT", // italy
+//								  @"JP", // japan
+//								  nil];
+//		}
+//		
+//		NSLocale* currentLocale = [NSLocale currentLocale];  // get the current locale.
+//		NSString* countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
+//		NSLog(@"contryCode # %@",countryCode);
+//		
+//		if ([supportedCountries containsObject:countryCode]) {
+//			_iadAvailable = YES;
+//		}
+//		else{
+//			_iadAvailable = NO;
+//		}
 		
 		// 优先调用IAD
-		
-		
-		if (_iadAvailable) { // iad
 
-			[self setupIAD];
-		}
-		else{ //gad
-			[self setupGAD];
-		}
+		[self setupGAD];
+		
+//		if (_iadAvailable) { // iad
+//
+//			[self setupIAD];
+//		}
+//		else{ //gad
+//			[self setupGAD];
+//		}
 		
 		// 开始时hidden，等到载入iad时才显示
 //		self.hidden = YES;
@@ -152,46 +154,46 @@ static id sharedInstance;
 
 //	[[ViewController sharedInstance] initBanner];
 }
-#pragma mark - iAD Banner
-
-
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-	L();
-
-//	self.hidden = NO;
-	
-	self.isAdDisplaying = YES;
-	
-}
-
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
-{
-	//	L();
-	NSLog(@"error # %@",[error localizedDescription]);
-
-//	self.hidden= YES;
-	
-	self.isAdDisplaying = NO;
-
-	//iad fail 自动调用 admob
-	[self setupGAD];
-	
-}
-
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
-{
-	
-	
-    return YES;
-}
-
-- (void)bannerViewActionDidFinish:(ADBannerView *)banner
-{
-	L();
-	
-}
-
+//#pragma mark - iAD Banner
+//
+//
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+//{
+//	L();
+//
+////	self.hidden = NO;
+//	
+//	self.isAdDisplaying = YES;
+//	
+//}
+//
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+//{
+//	//	L();
+//	NSLog(@"error # %@",[error localizedDescription]);
+//
+////	self.hidden= YES;
+//	
+//	self.isAdDisplaying = NO;
+//
+//	//iad fail 自动调用 admob
+//	[self setupGAD];
+//	
+//}
+//
+//- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+//{
+//	
+//	
+//    return YES;
+//}
+//
+//- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+//{
+//	L();
+//	
+//}
+//
 
 #pragma mark - Google Admob Ads
 // Sent when an ad request loaded an ad.  This is a good opportunity to add this
@@ -208,7 +210,7 @@ static id sharedInstance;
 	
 	_isGADLoaded = YES;
 	
-//	self.hidden = NO;
+
 
 	self.isAdDisplaying = YES;
 //	[[NSNotificationCenter defaultCenter]postNotificationName:kNotificationLoadAdview object:self];
@@ -269,26 +271,26 @@ static id sharedInstance;
 
 #pragma mark -
 
-- (void)setupIAD{
-	L();
-	if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
-		_iadView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
-		
-	}
-	else {
-		_iadView = [[ADBannerView alloc] init];
-	}
-	_iadView.delegate = self;
-	_iadView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
-	
-	[self addSubview:_iadView];
-	
-	_isIAD = YES;
-	[_gadView removeFromSuperview];
-	_gadView.delegate = nil;
-	_gadView = nil;
-	
-}
+//- (void)setupIAD{
+//	L();
+//	if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
+//		_iadView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+//		
+//	}
+//	else {
+//		_iadView = [[ADBannerView alloc] init];
+//	}
+//	_iadView.delegate = self;
+//	_iadView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierLandscape;
+//	
+//	[self addSubview:_iadView];
+//	
+//	_isIAD = YES;
+//	[_gadView removeFromSuperview];
+//	_gadView.delegate = nil;
+//	_gadView = nil;
+//	
+//}
 
 - (void)setupGAD{
 	L();
@@ -301,17 +303,19 @@ static id sharedInstance;
 	_gadView.layer.shadowColor = [UIColor grayColor].CGColor;
 	
 	_gadView.adUnitID = MY_BANNER_UNIT_ID;
-	_gadView.rootViewController = [ViewController sharedInstance];
-	
+
+//	_gadView.rootViewController = [ViewController sharedInstance];
+	_gadView.rootViewController = [XCViewController sharedInstance];
+    
 	_gadView.delegate = self;
 	[_gadView loadRequest:[GADRequest request]];
 	
 	[self addSubview:_gadView];
 	
-	_isIAD = NO;
-	[_iadView removeFromSuperview];
-	_iadView.delegate = nil;
-	_iadView = nil;
+//	_isIAD = NO;
+//	[_iadView removeFromSuperview];
+//	_iadView.delegate = nil;
+//	_iadView = nil;
 	
 }
 

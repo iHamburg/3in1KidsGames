@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Xappsoft. All rights reserved.
 //
 
+extern CGFloat _h,_w;
+extern CGRect _r;
 
 void saveArchived(id, NSString*);
 

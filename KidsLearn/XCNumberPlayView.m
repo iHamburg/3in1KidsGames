@@ -31,7 +31,7 @@
 	vorderLayer.image = [UIImage imageNamed:@"green_fields.png"];
 	vorderLayer.autoresizingMask = kAutoResize;
 	
-	indexButton = [UIButton buttonWithFrame:CGRectMake(500, 110, 143, 123) title:nil image:nil target:self actcion:@selector(buttonClicked:)];
+	indexButton = [UIButton buttonWithFrame:CGRectMake(500, 110, 143, 123) title:nil image:nil target:self action:@selector(buttonClicked:)];
 	indexButton.autoresizingMask = kAutoResize;
 	
     bearLayer = [Sprite spriteWithNames:[NSArray arrayWithObjects:@"animation_bear_1.png",@"animation_bear_2.png", nil]];

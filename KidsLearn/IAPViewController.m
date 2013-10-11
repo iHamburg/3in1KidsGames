@@ -7,6 +7,7 @@
 //
 
 #import "IAPViewController.h"
+#import "AdView.h"
 
 @interface IAPViewController ()
 
@@ -60,5 +61,6 @@
 	[rootVC viewWillAppear:YES];
 	[self.view removeFromSuperview];
 	[rootVC viewDidAppear:YES];
+    [AdView releaseSharedInstance];
 }
 @end

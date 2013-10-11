@@ -16,7 +16,7 @@
 @synthesize viewController = _viewController;
 @synthesize facebook;
 
-#define kFlurryKey @"VDSJN9TZV25FQV28HP2Z" //iCA
+#define kFlurryKey @"VDSJN9TZV25FQV28HP2Z" //3in1
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -40,7 +40,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
     // Override point for customization after application launch.
-    self.viewController = [[XCViewController alloc] initWithNibName:@"XCViewController" bundle:nil];
+//    self.viewController = [[XCViewController alloc] initWithNibName:@"XCViewController" bundle:nil];
+    self.viewController = [XCViewController sharedInstance];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

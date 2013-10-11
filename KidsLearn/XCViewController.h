@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "InfoViewController.h"
 #import "Controller.h"
 #import "Sprite.h"
 
@@ -24,42 +24,40 @@
 @class XCShapeViewController;
 @class XCChooseViewController;
 @class IAPViewController;
-@class MoreAppViewController;
-@class InfoViewController;
 
-@interface XCViewController : UIViewController{
+
+
+@interface XCViewController : UIViewController<InfoDelegate>{
 	
     XCChooseViewController *chooseViewController;
     XCShapeViewController *shapeVC;
     XCNumberViewController *numVC;
     XCColorViewController *colorVC;
-	InfoViewController *infoVC;
-	MoreAppViewController *moreAppVC;
 	IAPViewController *iapVC;
-  
+    InfoViewController *infoVC;
     
 	IBOutlet UIButton *infoB;
 	IBOutlet UIButton *moreAppB;
     IBOutlet UIButton *iapB;
 	IBOutlet UIButton *startB;
 	IBOutlet UIImageView *shapeLockV;
-	IBOutlet UIImageView *colorLockV;
+
 	IBOutlet UIImageView *playLockV;
 	IBOutlet UIView *modulView;
 	IBOutlet UIButton *play;
 	IBOutlet UIButton *sprecherB;
 	IBOutlet Sprite *lion;
-
 	
 }
 
 
 @property (nonatomic, strong) IBOutlet UIButton *play;
 
++ (id)sharedInstance;
 
 - (IBAction)buttonClicked:(id)sender;
 
-- (void)toInfo;
+//- (void)toInfo;
 - (void)toIAP;
 - (void)toMoreApp;
 

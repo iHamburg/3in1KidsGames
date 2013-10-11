@@ -16,14 +16,7 @@
 
 @implementation XCColorViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
@@ -34,7 +27,7 @@
 	
 	testV = [[XCColorTestView alloc]initWithFrame:self.view.bounds];
     
-    [playB setOrigin:CGPointMake(885, 666)];
+    [playB setOrigin:CGPointMake(885, 640)];
 	
 }
 

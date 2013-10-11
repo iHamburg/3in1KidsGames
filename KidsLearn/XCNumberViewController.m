@@ -23,20 +23,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
-	// playV可能有多个！
-	L();
-	
 	
 	//因为没有把playV和testV 加到subview中，所以不会自动变形
 	playV = [[XCNumberRoleCallPlayView alloc] initWithFrame:self.view.bounds];
 	playV.autoresizingMask = kAutoResize;
 	testV = [[XCNumberTestView alloc]initWithFrame:self.view.bounds];
 	testV.autoresizingMask = kAutoResize;
-//
-//	[self.view addSubview:playV];
-//	[self.view addSubview:testV];
-	NSLog(@"numVC:%@,test:%@",self.view,testV); //1024, 1024
+
 }
 
 //number 0-9
@@ -49,15 +42,14 @@
 
 	backB.hidden = NO;
 	homeB.hidden = YES;
-    [backB setBackgroundImage:[UIImage imageNamed:@"back_white.png"] forState:UIControlStateNormal];
-    [backB setOrigin:CGPointMake(10, 350)];
+ 
+//    [backB setBackgroundImage:[UIImage imageNamed:@"back_white.png"] forState:UIControlStateNormal];
+//    [backB setOrigin:CGPointMake(10, 350)];
     
 	[self.view insertSubview:playV belowSubview:backB];
 	
 	[(XCNumberPlayView*)playV play];
 	[[AudioController sharedInstance] playWaterMusic];
-	
-	
 
 }
 

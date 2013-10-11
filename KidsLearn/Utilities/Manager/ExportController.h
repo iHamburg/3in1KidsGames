@@ -20,12 +20,11 @@
 
 +(id)sharedInstance;
 
-- (void)sendEmail:(NSDictionary*)info delegate:(id)delegate;
 
+- (void)sendEmail:(NSDictionary *)info;
+- (void)sendTweetWithText:(NSString*)text image:(UIImage*)image;
 
-- (void)sendTweet:(NSString*)text delegate:(id)delegate;
-- (void)sendTweetWithImage:(UIImage*)img delegate:(id)delegate;
-
+- (void)linkToAppStoreWithID:(NSString*)appID;
 - (void)toRate;
 - (void)showRateAlert;
 @end

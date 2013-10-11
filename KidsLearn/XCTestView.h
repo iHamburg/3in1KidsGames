@@ -10,6 +10,7 @@
 #import "Controller.h"
 #import "XCLearnViewController.h"
 #import "Sprite.h"
+#import "ControlView.h"
 
 @interface XCTestView : UIView<GestureDelegate, SpriteDelegate>{
 	UIImageView *bgV;

@@ -46,6 +46,7 @@ static float spriteWidth = 150;
         [sprite setOrigin:CGPointMake(originXs[i], originYs[i])];
 		[self addSubview:sprite];
 		sprite.hidden = YES;
+//        sprite.backgroundColor = [UIColor redColor];
 
 	}
 	

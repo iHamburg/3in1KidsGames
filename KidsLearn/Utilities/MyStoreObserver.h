@@ -11,7 +11,6 @@
 #import "Utilities.h"
 #import "LoadingView.h"
 
-#define kIAPFullVersion @"de.xappsoft.kidslearnnscfree.fullversion"
 
 @protocol IAPDelegate;
 

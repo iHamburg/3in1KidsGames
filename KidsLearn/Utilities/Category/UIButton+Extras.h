@@ -10,6 +10,11 @@
 
 @interface UIButton (Extras)
 
-+ (UIButton*)buttonWithFrame:(CGRect)frame title:(NSString*)title image:(UIImage*)image target:(id)target actcion:(SEL)action;
+
++ (UIButton*)buttonWithFrame:(CGRect)frame title:(NSString*)title image:(UIImage*)image target:(id)target action:(SEL)action;
++ (UIButton*)buttonWithFrame:(CGRect)frame title:(NSString*)title imageName:(NSString*)imageName target:(id)target action:(SEL)action;
++ (UIButton*)buttonWithFrame:(CGRect)frame title:(NSString*)title bgImageName:(NSString*)imageName target:(id)target action:(SEL)action;
++ (UIButton*)buttonWithImageName:(NSString*)imgName target:(id)target action:(SEL)action;
+
 
 @end

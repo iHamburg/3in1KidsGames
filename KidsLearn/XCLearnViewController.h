@@ -11,6 +11,7 @@
 #import "QuartzCore/QuartzCore.h"
 #import "Sprite.h"
 #import "XCViewController.h"
+#import "AdView.h"
 
 /*
  点击button －》XCPlayView
@@ -46,7 +47,7 @@
 
 - (IBAction)itemButtonClicked:(id)sender;
 
-
+- (void)layoutADBanner:(AdView *)banner;
 
 - (void)toHome;
 - (void)back; // to vc.view

@@ -13,8 +13,10 @@
 #import "XCShapeViewController.h"
 #import "XCChooseViewController.h"
 #import "IAPViewController.h"
-#import "InfoViewController.h"
-#import "MoreAppViewController.h"
+//#import "InfoViewController.h"
+//#import "MoreAppViewController.h"
+#import "AdView.h"
+#import "XCInfoViewController.h"
 
 @interface XCViewController ()
 
@@ -24,7 +26,17 @@
 
 @synthesize play;
 
++(id)sharedInstance{
+	
+	static id sharedInstance;
+	
+	if (sharedInstance == nil) {
 
+        sharedInstance = [[XCViewController alloc] initWithNibName:@"XCViewController" bundle:nil];
+	}
+	return sharedInstance;
+	
+}
 
 - (void)viewDidLoad
 {
@@ -33,7 +45,17 @@
     L();
     
 	[Controller sharedInstance];
-	
+    
+    [self registerNotifications];
+    
+    CGRect r = [UIScreen mainScreen].bounds;
+	r = CGRectApplyAffineTransform(r, CGAffineTransformMakeRotation(90 * M_PI / 180.));
+	r.origin = CGPointZero;
+//	NSLog(@"r # %@",NSStringFromCGRect(r));
+    _w = r.size.width;
+    _h = r.size.height;
+    _r = r;
+    
 	chooseViewController = [[XCChooseViewController alloc] initWithNibName:@"XCChooseViewController" bundle:nil];
     chooseViewController.rootVC = self;
 	chooseViewController.view.frame = kFrameUniversalHorizont;
@@ -46,12 +68,12 @@
     shapeVC = [[XCShapeViewController alloc]initWithNibName:@"XCShapeViewController" bundle:nil];
     shapeVC.rootVC = self;
 	shapeVC.view.frame = kFrameUniversalHorizont;
-	infoVC = [[InfoViewController alloc]initWithNibName:@"InfoViewController" bundle:nil];
-	infoVC.rootVC = self;
-	infoVC.view.frame = kFrameUniversalHorizont;
-	moreAppVC = [[MoreAppViewController alloc]initWithNibName:@"MoreAppViewController" bundle:nil];
-	moreAppVC.rootVC = self;
-	moreAppVC.view.frame = kFrameUniversalHorizont;
+//	infoVC = [[InfoViewController alloc]initWithNibName:@"InfoViewController" bundle:nil];
+//	infoVC.rootVC = self;
+//	infoVC.view.frame = kFrameUniversalHorizont;
+//	moreAppVC = [[MoreAppViewController alloc]initWithNibName:@"MoreAppViewController" bundle:nil];
+//	moreAppVC.rootVC = self;
+//	moreAppVC.view.frame = kFrameUniversalHorizont;
 	iapVC = [[IAPViewController alloc] initWithNibName:@"IAPViewController" bundle:nil];
 	iapVC.rootVC = self;
 	iapVC.view.frame = kFrameUniversalHorizont;
@@ -62,17 +84,14 @@
 	
 	BOOL silent = [[AudioController sharedInstance]silent];	
 	UIImage *sprecherImg = silent?[UIImage imageNamed:@"icon_sprecher_off.png"]:[UIImage imageNamed:@"icon_sprecher_on.png"];
-	sprecherB = [UIButton buttonWithFrame:CGRectMake(10, 10, 50, 50) title:nil image:sprecherImg target:self actcion:@selector(buttonClicked:)];
+	sprecherB = [UIButton buttonWithFrame:CGRectMake(10, 10, 50, 50) title:nil image:sprecherImg target:self action:@selector(buttonClicked:)];
 	sprecherB.autoresizingMask = kAutoResize;
 	[self.view addSubview:sprecherB];
 	
+    
+    [AdView sharedInstance];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    
-}
 
 - (void)viewWillAppear:(BOOL)animated{
 	L();
@@ -83,10 +102,11 @@
 		
 		iapB.hidden = YES;
 		shapeLockV.hidden = YES;
-		colorLockV.hidden = YES;
 		playLockV.hidden = YES;
 
-	}	
+	}
+    
+    infoB.hidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -100,7 +120,7 @@
 	
 	[self test];
 	
-	NSLog(@"numVC:%@",numVC.view);
+//	NSLog(@"numVC:%@",numVC.view);
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -112,9 +132,55 @@
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-//    return YES;
+
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 	
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+#pragma mark - Notification
+
+- (void)registerNotifications{
+    
+    //
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleAdviewNotification:) name:NotificationAdChanged object:nil];
+    
+}
+
+- (void)handleAdviewNotification:(NSNotification*)notification{
+    [self layoutADBanner:notification.object];
+    
+}
+
+#pragma mark - Adview
+
+
+- (void)layoutADBanner:(AdView *)banner{
+    
+    L();
+    
+    
+    [UIView animateWithDuration:0.25 animations:^{
+		
+		if (banner.isAdDisplaying) { // 从不显示到显示banner
+            
+			[banner setOrigin:CGPointMake(0, _h - banner.height)];
+			[self.view addSubview:banner];
+		}
+		else{
+			[banner setOrigin:CGPointMake(0, _h)];
+		}
+		
+    }];
+    
+}
+
+#pragma mark - Info
+- (void)infoVCWillClose:(InfoViewController *)_infoVC{
+    [infoVC.view removeFromSuperview];
+    infoVC = nil;
 }
 
 #pragma mark - Navigation
@@ -125,17 +191,25 @@
 	[self.view addSubview:iapVC.view];
 	[self viewDidDisappear:YES];
 }
-- (void)toInfo{
-//	[AudioController stopBGMusic];
-	[self.view addSubview:infoVC.view];
-	[self viewDidDisappear:YES];
-}
+//- (void)toInfo{
+////	[AudioController stopBGMusic];
+//	[self.view addSubview:infoVC.view];
+//	[self viewDidDisappear:YES];
+//}
 
 - (void)toMoreApp{
 
-	[self.view addSubview:moreAppVC.view];
+    infoVC = [[XCInfoViewController alloc] init];
+    infoVC.view.alpha = 1;
+    infoVC.delegate = self;
+    [self.view addSubview:infoVC.view];
+    
 	[self viewDidDisappear:YES];
+    
+    
 }
+
+
 
 #pragma mark - IBAction
 - (IBAction)buttonClicked:(id)sender{
@@ -147,21 +221,16 @@
     if(tag == kTagNumberB){
         
 		[[Controller sharedInstance] setMode:spielModeNumberLearn];
-//		[AudioController stopBGMusic];
+
 		[self.view addSubview:numVC.view];
 		[self viewDidDisappear:YES];
 		
     }
     else if (tag == kTagColorB) {
-//		[AudioController stopBGMusic];
-		if (isPaid()||isIAPFullVersion) {
+
 			[[Controller sharedInstance] setMode:spielModeColorLearn];
 			[self.view addSubview:colorVC.view];
 			[self viewDidDisappear:YES];
-		}
-		else {
-			[self toIAP];
-		}
 
     }
     else if(tag == kTagShapeB){
@@ -191,10 +260,10 @@
 
 	}
 	
-	if (sender == infoB) {
-		[self toInfo];
-	}
-	else if(sender == moreAppB) {
+//	if (sender == infoB) {
+//		[self toInfo];
+//	}
+	if(sender == moreAppB) {
 		[self toMoreApp];
 	}
 	else if (sender == iapB) {
@@ -204,7 +273,7 @@
 	else if(sender == startB){
 		
 
-		NSLog(@"modulview:%@",modulView);
+//		NSLog(@"modulview:%@",modulView);
 		[UIView animateWithDuration:0.6 animations:^{
 			startB.transform = CGAffineTransformMakeScale(0.01, 0.01);
 		} completion:^(BOOL finished) {

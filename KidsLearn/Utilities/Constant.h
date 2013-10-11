@@ -11,6 +11,8 @@
 #endif
 
 
+#define kIAPFullVersion @"de.xappsoft.kidslearnnscfree.fullversion"
+
 #define kCORNERRADIUS 20
 
 #pragma mark - file
@@ -53,7 +55,8 @@
 
 
 
-
+#define SSupportEmailTitle @"Feedback for 3in1 Kids Games"
+#define SRecommendEmailTitle @"3in1 Kids Games -- Amazing App for Kids"
 
 
 

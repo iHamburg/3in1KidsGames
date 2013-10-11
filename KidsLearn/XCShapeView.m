@@ -25,7 +25,7 @@
 }
 
 - (void)awakeFromNib{
-	L();
+
 	[self load];
 }
 
@@ -46,7 +46,7 @@
     CGPoint oldpoint = [gesture locationInView:self];
 	CGPoint point = CGPointMake(oldpoint.x-drawOrigin.x, oldpoint.y-drawOrigin.y);
 
-    NSLog(@"oldpoint:%@,point:%@",NSStringFromCGPoint(oldpoint),NSStringFromCGPoint(point));
+//    NSLog(@"oldpoint:%@,point:%@",NSStringFromCGPoint(oldpoint),NSStringFromCGPoint(point));
 //    CGRect rectCircle = CGRectMake(130, 343, 150, 150);
     CGRect rectCircle = CGRectMake(30, 20, 150, 150);
     if (CGRectContainsPoint(rectCircle, point)) {

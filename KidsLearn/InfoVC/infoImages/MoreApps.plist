@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>myecard</key>
+	<dict>
+		<key>Title</key>
+		<string>My eCard</string>
+		<key>Image</key>
+		<string>appIcon_MyeCard.png</string>
+		<key>Description</key>
+		<string>
+My eCard featured in United States, Australia, Canada, Germany, France, United Kingdom,Hong Kong, Saudi Arabia and Taiwan!
+
+My eCard is an app that can help you create your personal and individual e-cards with your own photos, in a very comfortable way.
+			
+Besides writing your own texts, you can also find beautiful and special verses to simplify creating a card or for your spirit.
+
+All you need to concern yourself with is personalizing your card by using a simple way in which you can tap, scale, rotate, drop and drag. As easy to use as this app, it cuts all tiresome steps and lets users create a great card just through 3 steps or even less.</string>
+		<key>PAppid</key>
+		<string>495584349</string>
+		<key>FAppid</key>
+		<string>540736134</string>
+	</dict>
+	<key>tinykitchen</key>
+	<dict>
+		<key>Title</key>
+		<string>Tiny Kitchen</string>
+		<key>Image</key>
+		<string>appicon_tinykitchen.png</string>
+		<key>Description</key>
+		<string>Tiny Kitchen is a cooking app for tiny cooks :-) Young children can play kitchen on iPhone or iPad with a lot of foods and realistic kitchen appliances for four cute characters. Cook and discover what they favor. Cooking will be a truly enjoyable activity for your children.
+
+FEATURE
+-Four cute characters: lion, cat, penguin and ninja!
+-International foods to play with: Hamburger, pizza, sushi, meat, fruit, ice…
+-Realistic kitchen appliances and cooking effects
+-Cooking food in different way: fry, microwave, cook, oven.
+-Outdoor food: you can pick fresh food like apple, carrot or catch fish for your tiny friends</string>
+		<key>PAppid</key>
+		<string>549019227</string>
+		<key>FAppid</key>
+		<string>550131099</string>
+	</dict>
+	<key>nsc</key>
+	<dict>
+		<key>Title</key>
+		<string>3in1 Kids Games</string>
+		<key>Image</key>
+		<string>appIcon_NSC.png</string>
+		<key>Description</key>
+		<string>3in1 Kids Games - Number, Color and Shape is designed for toddlers / preschoolers / kindergarten kids to learn colors, shapes and counting with pretty illustration, warm voiceover and funny interactive, animated activities.
+
+3in1 Kids Games is a fantastic tool that helps little ones better understand their colors, numbers and shapes. It uses examples such as toys or fruits to have young users first recognize the different colors and shapes found in the world around them. Learning is a natural process, and games are an effective way to help children learn about them.</string>
+		<key>PAppid</key>
+		<string>540869085</string>
+		<key>FAppid</key>
+		<string>540878802</string>
+	</dict>
+	<key>everalbum</key>
+	<dict>
+		<key>Title</key>
+		<string>Everalbum</string>
+		<key>Image</key>
+		<string>appIcon_Everalbum.png</string>
+		<key>Description</key>
+		<string>With Everalbum you can easily create photo albums, intuitive to use yet powerful. Everalbum helps you quickly create your masterpiece and instant share it to Instagram, Facebook and Twitter! You can also send it via email, or save it in your iPhone or iPad. From photo collages to photo albums, everything needs to be one or two taps away.
+			
+Features example: awesome photo filters to add amazing effects, about 70 creative fonts, import photos from Facebook, export albums to other apps, useful backgrounds/stickers…and more!
+			
+Keep what you love and share your happiness.</string>
+		<key>PAppid</key>
+		<string>577927911</string>
+		<key>FAppid</key>
+		<string>577925714</string>
+	</dict>
+	<key>instahat</key>
+	<dict>
+		<key>Title</key>
+		<string>InstaHat</string>
+		<key>Image</key>
+		<string>appIcon_InstaHat.png</string>
+		<key>Description</key>
+		<string>Ever want to know what you’d look like in a Fedora? Funny hat? Or cartoon hat for children or pets? With InstaHat you can try on many different hats on your iPhone, add awesome photo effects or frames, and share to see what your friends think of the new look.
+
+★ Features ★
+1. Over 120 different hats for everybody and also your pets
+2. Extremely simple to use
+3. Amazing photo effects and frames
+4. Shake your iPhone to change a hat, an effect or a frame
+5. Manually adjust the position, size and rotation of a hat
+</string>
+		<key>PAppid</key>
+		<string>597154228</string>
+		<key>FAppid</key>
+		<string>594492123</string>
+	</dict>
+</dict>
+</plist>

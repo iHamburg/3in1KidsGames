@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EBC1F063-B193-4D34-A086-1D7BE3980295</string>
+	<key>IDESourceControlProjectName</key>
+	<string>3in1KidsGames</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>412F52B5-823A-4F26-9DC8-E4F49864B8BC</key>
+		<string>https://github.com/iHamburg/3in1KidsGames.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>3in1KidsGames.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>412F52B5-823A-4F26-9DC8-E4F49864B8BC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iHamburg/3in1KidsGames.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>412F52B5-823A-4F26-9DC8-E4F49864B8BC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>412F52B5-823A-4F26-9DC8-E4F49864B8BC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>3in1KidsGames</string>
+		</dict>
+	</array>
+</dict>
+</plist>

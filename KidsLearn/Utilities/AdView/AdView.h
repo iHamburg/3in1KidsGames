@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <iAd/iAd.h>
+//#import <iAd/iAd.h>
 #import "GADBannerView.h"
 
 #define kKeyPathAdDisplaying @"isAdDisplaying"
 
 extern NSString *const NotificationAdChanged;
 
-@interface AdView : UIView<GADBannerViewDelegate,ADBannerViewDelegate>{
+@interface AdView : UIView<GADBannerViewDelegate>{
 	
-	ADBannerView *_iadView;
+//	ADBannerView *_iadView;
 	GADBannerView *_gadView;
 
 }
@@ -26,7 +26,7 @@ extern NSString *const NotificationAdChanged;
 
 @property (nonatomic, assign) BOOL isAdDisplaying;
 
-- (BOOL)bannerLoaded;
+//- (BOOL)bannerLoaded;
 
 
 @end
