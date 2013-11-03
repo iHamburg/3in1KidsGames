@@ -11,15 +11,12 @@
 #import "MoreApp.h"
 #import "ExportController.h"
 #import <QuartzCore/QuartzCore.h>
-//#import "FacebookManager.h"
-
-@interface InfoViewController ()
-
-@end
+#import "AboutUsValidator.h"
+#import "MoreAppValidator.h"
 
 @implementation InfoViewController
 
-
+@synthesize selectedAppID;
 
 - (void)loadView{
 
@@ -60,18 +57,7 @@
 #pragma mark - IBAction
 - (IBAction)buttonClicked:(id)sender{
 	L();
-//	UIButton *b = sender;
-//	selectedIndex = [sender tag]-1;
-//	
-//	MoreApp *app = moreApps[selectedIndex];
-//
-//	ribbon.frame = CGRectMake(b.center.x-ribbon.width/2, CGRectGetMaxY(b.frame)-(isPad?5:1), ribbon.width, ribbon.height);
-//
-//	[scrollView insertSubview:ribbon belowSubview:b];
-//	
-//	textV.text = app.description;
-//	otherAppL.text = app.title;
-//	[textV setContentOffset:CGPointMake(0, 0)];
+
 }
 
 #pragma mark -
@@ -99,9 +85,40 @@
 	[vc.view removeFromSuperview];
 }
 
-- (void)aboutus{
-	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.xappsoft.de/index.php?lang=en"]];
+- (void)showParentalGate{
+
+    int x = arc4random()%100;
+    int y = arc4random()%100;
+    
+    sum = x + y;
+    
+    NSString *frageText = [NSString stringWithFormat:@"%d + %d",x,y];
+    
+    UIAlertView *parentalGateAlert = [[UIAlertView alloc] initWithTitle:@"Solve to Enter Parents Section" message:frageText delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Continue", nil];
+    parentalGateAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    [parentalGateAlert show];
 }
+
+
+
+- (void)aboutus{
+    
+
+
+    validator = [[AboutUsValidator alloc] init];
+    [validator validate];
+
+}
+
+- (void)parentalGateValidatorDidFail:(ParentalGateValidator *)validator{
+    
+}
+
+- (void)parentalGateValidatorDidSuccess:(ParentalGateValidator *)validator{
+    
+}
+
 - (void)tweetus{
 	
 
@@ -137,15 +154,14 @@
 
 
 - (void)appstore{
-	MoreApp *app = moreApps[selectedIndex];
-	NSString *appid = app.fAppid;
-	
-	NSString *urlStr = [NSString stringWithFormat:@"https://itunes.apple.com/de/app/id%@&mt=8",appid];
-	NSURL *url = [NSURL URLWithString: [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF16StringEncoding]];
+
+    MoreApp *app = moreApps[selectedIndex];
+    selectedAppID = app.fAppid;
     
-//    NSURL *url =  [NSURL URLWithString:@"https://itunes.apple.com/de/app/id577927911&mt=8"];
-	[[UIApplication sharedApplication] openURL:url];
-	
+    validator = [[MoreAppValidator alloc] initWithViewController:self];
+    [validator validate];
+    
+
 }
 
 - (void)selectApp:(MoreApp*)app{

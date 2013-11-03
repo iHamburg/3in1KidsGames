@@ -101,6 +101,18 @@
 		2609D43318058BBF0019C242 /* icon_moreappback.png in Resources */ = {isa = PBXBuildFile; fileRef = 2609D3D818058BBF0019C242 /* icon_moreappback.png */; };
 		2609D43418058BBF0019C242 /* MoreApps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2609D3D918058BBF0019C242 /* MoreApps.plist */; };
 		2609D43518058BBF0019C242 /* MoreApps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2609D3D918058BBF0019C242 /* MoreApps.plist */; };
+		260DC2811807C78600E7CADA /* LRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC27C1807C78600E7CADA /* LRootViewController.m */; };
+		260DC2821807C78600E7CADA /* LRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC27C1807C78600E7CADA /* LRootViewController.m */; };
+		260DC2831807C78600E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC27E1807C78600E7CADA /* PRootViewController.m */; };
+		260DC2841807C78600E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC27E1807C78600E7CADA /* PRootViewController.m */; };
+		260DC2851807C78600E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2801807C78600E7CADA /* RootViewController.m */; };
+		260DC2861807C78600E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2801807C78600E7CADA /* RootViewController.m */; };
+		2644C6281816A31400CF1482 /* ParentalGateValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C6271816A31400CF1482 /* ParentalGateValidator.m */; };
+		2644C6291816A31400CF1482 /* ParentalGateValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C6271816A31400CF1482 /* ParentalGateValidator.m */; };
+		2644C62C1816A32600CF1482 /* AboutUsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62B1816A32600CF1482 /* AboutUsValidator.m */; };
+		2644C62D1816A32600CF1482 /* AboutUsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62B1816A32600CF1482 /* AboutUsValidator.m */; };
+		2644C6301816A33600CF1482 /* MoreAppValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62F1816A33600CF1482 /* MoreAppValidator.m */; };
+		2644C6311816A33600CF1482 /* MoreAppValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62F1816A33600CF1482 /* MoreAppValidator.m */; };
 		26DF20681804F66C0082B196 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0EEE7E159F0F7200114E67 /* StoreKit.framework */; };
 		26DF2110180536890082B196 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF210B180536890082B196 /* InstructionViewController.m */; };
 		26DF2111180536890082B196 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF210B180536890082B196 /* InstructionViewController.m */; };
@@ -1336,6 +1348,18 @@
 		2609D3D718058BBF0019C242 /* appicon_tinykitchen~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon_tinykitchen~ipad.png"; sourceTree = "<group>"; };
 		2609D3D818058BBF0019C242 /* icon_moreappback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_moreappback.png; sourceTree = "<group>"; };
 		2609D3D918058BBF0019C242 /* MoreApps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MoreApps.plist; sourceTree = "<group>"; };
+		260DC27B1807C78600E7CADA /* LRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRootViewController.h; sourceTree = "<group>"; };
+		260DC27C1807C78600E7CADA /* LRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRootViewController.m; sourceTree = "<group>"; };
+		260DC27D1807C78600E7CADA /* PRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRootViewController.h; sourceTree = "<group>"; };
+		260DC27E1807C78600E7CADA /* PRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRootViewController.m; sourceTree = "<group>"; };
+		260DC27F1807C78600E7CADA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		260DC2801807C78600E7CADA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		2644C6261816A31400CF1482 /* ParentalGateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentalGateValidator.h; sourceTree = "<group>"; };
+		2644C6271816A31400CF1482 /* ParentalGateValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentalGateValidator.m; sourceTree = "<group>"; };
+		2644C62A1816A32600CF1482 /* AboutUsValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsValidator.h; sourceTree = "<group>"; };
+		2644C62B1816A32600CF1482 /* AboutUsValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsValidator.m; sourceTree = "<group>"; };
+		2644C62E1816A33600CF1482 /* MoreAppValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreAppValidator.h; sourceTree = "<group>"; };
+		2644C62F1816A33600CF1482 /* MoreAppValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreAppValidator.m; sourceTree = "<group>"; };
 		26DF210A180536890082B196 /* InstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionViewController.h; sourceTree = "<group>"; };
 		26DF210B180536890082B196 /* InstructionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionViewController.m; sourceTree = "<group>"; };
 		26DF210C180536890082B196 /* VerticalInstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalInstructionViewController.h; sourceTree = "<group>"; };
@@ -2149,9 +2173,23 @@
 			path = MoreApps;
 			sourceTree = "<group>";
 		};
+		260DC27A1807C78600E7CADA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				260DC27F1807C78600E7CADA /* RootViewController.h */,
+				260DC2801807C78600E7CADA /* RootViewController.m */,
+				260DC27B1807C78600E7CADA /* LRootViewController.h */,
+				260DC27C1807C78600E7CADA /* LRootViewController.m */,
+				260DC27D1807C78600E7CADA /* PRootViewController.h */,
+				260DC27E1807C78600E7CADA /* PRootViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		26DF20FE18050A1E0082B196 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				260DC27A1807C78600E7CADA /* Root */,
 				26FA336418043E620028F104 /* AdView */,
 				26DF2116180567510082B196 /* InfoVC */,
 				26DF2109180536890082B196 /* Instruction */,
@@ -2179,6 +2217,12 @@
 				26DF2118180567510082B196 /* InfoViewController.m */,
 				2609D3A518057C240019C242 /* XCInfoViewController.h */,
 				2609D3A618057C240019C242 /* XCInfoViewController.m */,
+				2644C6261816A31400CF1482 /* ParentalGateValidator.h */,
+				2644C6271816A31400CF1482 /* ParentalGateValidator.m */,
+				2644C62A1816A32600CF1482 /* AboutUsValidator.h */,
+				2644C62B1816A32600CF1482 /* AboutUsValidator.m */,
+				2644C62E1816A33600CF1482 /* MoreAppValidator.h */,
+				2644C62F1816A33600CF1482 /* MoreAppValidator.m */,
 				26DF2119180567510082B196 /* MoreApp.h */,
 				26DF211A180567510082B196 /* MoreApp.m */,
 				2609D3AA18058BBF0019C242 /* infoImages */,
@@ -4533,12 +4577,14 @@
 				AF13472C158FCE690053BFF2 /* UIAlertView+Extras.m in Sources */,
 				AF13472D158FCE690053BFF2 /* UIButton+Extras.m in Sources */,
 				AF13472E158FCE690053BFF2 /* UIColor+Extras.m in Sources */,
+				2644C6301816A33600CF1482 /* MoreAppValidator.m in Sources */,
 				AF13472F158FCE690053BFF2 /* UIImage+Extras.m in Sources */,
 				AF134730158FCE690053BFF2 /* UINavigationBar+CustomBG.m in Sources */,
 				26FA337718043E620028F104 /* AdView.m in Sources */,
 				AF134731158FCE690053BFF2 /* UIPopoverController+Extras.m in Sources */,
 				AF134732158FCE690053BFF2 /* UIView+Extras.m in Sources */,
 				AF134733158FCE690053BFF2 /* UIViewController+Landscape.m in Sources */,
+				260DC2851807C78600E7CADA /* RootViewController.m in Sources */,
 				AF134734158FCE690053BFF2 /* UIViewController+Portrait.m in Sources */,
 				26DF211B180567510082B196 /* InfoViewController.m in Sources */,
 				AF134735158FCE690053BFF2 /* UIWebView+Extras.m in Sources */,
@@ -4554,16 +4600,20 @@
 				AF6E7CBB158FD46700070AE7 /* XCTestView.m in Sources */,
 				AF0F220015908E8D0050CB80 /* XCLearnViewController.m in Sources */,
 				AF89E1E81590B0F100A344E8 /* XCNumberPlayView.m in Sources */,
+				260DC2811807C78600E7CADA /* LRootViewController.m in Sources */,
 				AF89E1EC1590B10500A344E8 /* XCColorPlayView.m in Sources */,
 				AF89E1EF1590B11400A344E8 /* XCShapePlayView.m in Sources */,
 				AF89E1F21590B12E00A344E8 /* XCNumberTestView.m in Sources */,
 				AF89E1F51590B13C00A344E8 /* XCColorTestView.m in Sources */,
 				AF89E1F81590B14A00A344E8 /* XCShapeTestView.m in Sources */,
 				AFCBE264159379EC00233D9C /* ControlView.m in Sources */,
+				2644C6281816A31400CF1482 /* ParentalGateValidator.m in Sources */,
 				AF8616A9159398CB0073AECC /* Sprite.m in Sources */,
+				2644C62C1816A32600CF1482 /* AboutUsValidator.m in Sources */,
 				AF3B7048159768730085D98D /* CTestDuckView.m in Sources */,
 				AF1880A2159840E400572BC4 /* CirclePlayView.m in Sources */,
 				AF1880AA15984C6600572BC4 /* DiamondPlayView.m in Sources */,
+				260DC2831807C78600E7CADA /* PRootViewController.m in Sources */,
 				AF1880AD15984CF600572BC4 /* PentagonPlayView.m in Sources */,
 				AF1880B015984D1600572BC4 /* RectanglePlayView.m in Sources */,
 				AF1880B315984D3000572BC4 /* SquarePlayView.m in Sources */,
@@ -4626,12 +4676,14 @@
 				AF51EDFA159DF12E00675159 /* UIAlertView+Extras.m in Sources */,
 				AF51EDFB159DF12E00675159 /* UIButton+Extras.m in Sources */,
 				AF51EDFC159DF12E00675159 /* UIColor+Extras.m in Sources */,
+				2644C6311816A33600CF1482 /* MoreAppValidator.m in Sources */,
 				AF51EDFD159DF12E00675159 /* UIImage+Extras.m in Sources */,
 				AF51EDFE159DF12E00675159 /* UINavigationBar+CustomBG.m in Sources */,
 				26FA337818043E620028F104 /* AdView.m in Sources */,
 				AF51EDFF159DF12E00675159 /* UIPopoverController+Extras.m in Sources */,
 				AF51EE00159DF12E00675159 /* UIView+Extras.m in Sources */,
 				AF51EE01159DF12E00675159 /* UIViewController+Landscape.m in Sources */,
+				260DC2861807C78600E7CADA /* RootViewController.m in Sources */,
 				AF51EE02159DF12E00675159 /* UIViewController+Portrait.m in Sources */,
 				26DF211C180567510082B196 /* InfoViewController.m in Sources */,
 				AF51EE03159DF12E00675159 /* UIWebView+Extras.m in Sources */,
@@ -4647,16 +4699,20 @@
 				AF51EE0E159DF12E00675159 /* XCTestView.m in Sources */,
 				AF51EE0F159DF12E00675159 /* XCLearnViewController.m in Sources */,
 				AF51EE10159DF12E00675159 /* XCNumberPlayView.m in Sources */,
+				260DC2821807C78600E7CADA /* LRootViewController.m in Sources */,
 				AF51EE11159DF12E00675159 /* XCColorPlayView.m in Sources */,
 				AF51EE12159DF12E00675159 /* XCShapePlayView.m in Sources */,
 				AF51EE13159DF12E00675159 /* XCNumberTestView.m in Sources */,
 				AF51EE14159DF12E00675159 /* XCColorTestView.m in Sources */,
 				AF51EE15159DF12E00675159 /* XCShapeTestView.m in Sources */,
 				AF51EE16159DF12E00675159 /* ControlView.m in Sources */,
+				2644C6291816A31400CF1482 /* ParentalGateValidator.m in Sources */,
 				AF51EE17159DF12E00675159 /* Sprite.m in Sources */,
+				2644C62D1816A32600CF1482 /* AboutUsValidator.m in Sources */,
 				AF51EE19159DF12E00675159 /* CTestDuckView.m in Sources */,
 				AF51EE1A159DF12E00675159 /* CirclePlayView.m in Sources */,
 				AF51EE1C159DF12E00675159 /* DiamondPlayView.m in Sources */,
+				260DC2841807C78600E7CADA /* PRootViewController.m in Sources */,
 				AF51EE1D159DF12E00675159 /* PentagonPlayView.m in Sources */,
 				AF51EE1E159DF12E00675159 /* RectanglePlayView.m in Sources */,
 				AF51EE1F159DF12E00675159 /* SquarePlayView.m in Sources */,

@@ -10,7 +10,7 @@
 #import "InfoViewController.h"
 #import "Controller.h"
 #import "Sprite.h"
-
+#import "LRootViewController.h"
 
 #define kTagNumberB 111
 #define kTagColorB  112
@@ -57,7 +57,6 @@
 
 - (IBAction)buttonClicked:(id)sender;
 
-//- (void)toInfo;
 - (void)toIAP;
 - (void)toMoreApp;
 

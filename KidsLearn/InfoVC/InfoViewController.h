@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "InstructionViewController.h"
 #import "MoreApp.h"
+#import "ParentalGateValidator.h"
 
 @protocol InfoDelegate;
 
@@ -19,12 +20,20 @@
 
 	NSMutableArray *moreApps;
 
+    ParentalGateValidator *validator;
+    
+    NSString *selectedAppID;
+    
 	__unsafe_unretained id<InfoDelegate> _delegate;
 	int selectedIndex;
-
+    
+    int sum;
+    
+    
 }
 
 @property (nonatomic, unsafe_unretained) id<InfoDelegate> delegate;
+@property (nonatomic, strong) NSString *selectedAppID;
 
 - (void)back;
 - (void)toInstruction;
@@ -36,6 +45,8 @@
 - (void)supportEmail;
 
 - (void)selectApp:(MoreApp*)app;
+
+- (void)showParentalGate;
 
 @end
 

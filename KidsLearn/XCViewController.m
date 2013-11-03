@@ -89,7 +89,7 @@
 	[self.view addSubview:sprecherB];
 	
     
-    [AdView sharedInstance];
+//    [AdView sharedInstance];
 }
 
 
@@ -111,7 +111,7 @@
 
 - (void)viewDidAppear:(BOOL)animated{
 	L();
-	NSLog(@"root:%@",self.view);
+//	NSLog(@"root:%@",self.view);
 	[super viewDidAppear:animated];
 	
 	[lion startAnimating];
@@ -130,12 +130,7 @@
 	[lion stopAnimating];
 	[[AudioController sharedInstance] stopBGMusic];
 }
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
 
-	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-	
-}
 
 - (void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];

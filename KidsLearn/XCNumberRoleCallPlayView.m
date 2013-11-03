@@ -33,7 +33,7 @@ static float spriteWidth = 150;
 	
 	// 载入所有的item
 	spriteNames = [SpriteManager spriteNamesForNumberRoleCallView];
-	NSLog(@"spriteNames:%@",spriteNames);
+//	NSLog(@"spriteNames:%@",spriteNames);
 	
 	spriteRects = [NSMutableArray array];
 	
