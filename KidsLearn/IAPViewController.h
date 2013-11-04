@@ -10,10 +10,13 @@
 #import "Controller.h"
 #import "XCViewController.h"
 #import "MyStoreObserver.h"
+#import "ParentalGateValidator.h"
 
 @interface IAPViewController : UIViewController<IAPDelegate>{
 	IBOutlet UIButton *homeB;
 	IBOutlet UIButton *iapB ,*restoreB;
+    
+    ParentalGateValidator *validator;
 }
 
 @property (nonatomic, unsafe_unretained) XCViewController *rootVC;

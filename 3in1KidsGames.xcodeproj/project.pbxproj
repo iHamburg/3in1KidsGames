@@ -109,10 +109,6 @@
 		260DC2861807C78600E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2801807C78600E7CADA /* RootViewController.m */; };
 		2644C6281816A31400CF1482 /* ParentalGateValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C6271816A31400CF1482 /* ParentalGateValidator.m */; };
 		2644C6291816A31400CF1482 /* ParentalGateValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C6271816A31400CF1482 /* ParentalGateValidator.m */; };
-		2644C62C1816A32600CF1482 /* AboutUsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62B1816A32600CF1482 /* AboutUsValidator.m */; };
-		2644C62D1816A32600CF1482 /* AboutUsValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62B1816A32600CF1482 /* AboutUsValidator.m */; };
-		2644C6301816A33600CF1482 /* MoreAppValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62F1816A33600CF1482 /* MoreAppValidator.m */; };
-		2644C6311816A33600CF1482 /* MoreAppValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2644C62F1816A33600CF1482 /* MoreAppValidator.m */; };
 		26DF20681804F66C0082B196 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0EEE7E159F0F7200114E67 /* StoreKit.framework */; };
 		26DF2110180536890082B196 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF210B180536890082B196 /* InstructionViewController.m */; };
 		26DF2111180536890082B196 /* InstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF210B180536890082B196 /* InstructionViewController.m */; };
@@ -1217,10 +1213,6 @@
 		AFE4671915A76EC70000EFAC /* Icon_Lock.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE4671015A76EC70000EFAC /* Icon_Lock.png */; };
 		AFE4671A15A76EC70000EFAC /* Icon_Lock2x@.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE4671115A76EC70000EFAC /* Icon_Lock2x@.png */; };
 		AFE4671B15A76EC70000EFAC /* Icon_Lock2x@.png in Resources */ = {isa = PBXBuildFile; fileRef = AFE4671115A76EC70000EFAC /* Icon_Lock2x@.png */; };
-		AFEC579315A49AA30006D696 /* MoreAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEC579115A49AA30006D696 /* MoreAppViewController.m */; };
-		AFEC579415A49AA30006D696 /* MoreAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEC579115A49AA30006D696 /* MoreAppViewController.m */; };
-		AFEC579515A49AA30006D696 /* MoreAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEC579215A49AA30006D696 /* MoreAppViewController.xib */; };
-		AFEC579615A49AA30006D696 /* MoreAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEC579215A49AA30006D696 /* MoreAppViewController.xib */; };
 		AFEC57A315A4B0830006D696 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEC57A215A4B0830006D696 /* Twitter.framework */; };
 		AFEC57A415A4B08B0006D696 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEC57A215A4B0830006D696 /* Twitter.framework */; };
 		AFEC57B915A4B8550006D696 /* View_Info_backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = AFEC57A915A4B8550006D696 /* View_Info_backBtn.png */; };
@@ -1356,10 +1348,6 @@
 		260DC2801807C78600E7CADA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2644C6261816A31400CF1482 /* ParentalGateValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentalGateValidator.h; sourceTree = "<group>"; };
 		2644C6271816A31400CF1482 /* ParentalGateValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentalGateValidator.m; sourceTree = "<group>"; };
-		2644C62A1816A32600CF1482 /* AboutUsValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsValidator.h; sourceTree = "<group>"; };
-		2644C62B1816A32600CF1482 /* AboutUsValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsValidator.m; sourceTree = "<group>"; };
-		2644C62E1816A33600CF1482 /* MoreAppValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreAppValidator.h; sourceTree = "<group>"; };
-		2644C62F1816A33600CF1482 /* MoreAppValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreAppValidator.m; sourceTree = "<group>"; };
 		26DF210A180536890082B196 /* InstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionViewController.h; sourceTree = "<group>"; };
 		26DF210B180536890082B196 /* InstructionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionViewController.m; sourceTree = "<group>"; };
 		26DF210C180536890082B196 /* VerticalInstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalInstructionViewController.h; sourceTree = "<group>"; };
@@ -2007,9 +1995,6 @@
 		AFE4670F15A76EC70000EFAC /* icon_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_info.png; sourceTree = "<group>"; };
 		AFE4671015A76EC70000EFAC /* Icon_Lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Lock.png; sourceTree = "<group>"; };
 		AFE4671115A76EC70000EFAC /* Icon_Lock2x@.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_Lock2x@.png"; sourceTree = "<group>"; };
-		AFEC579015A49AA30006D696 /* MoreAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreAppViewController.h; sourceTree = "<group>"; };
-		AFEC579115A49AA30006D696 /* MoreAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreAppViewController.m; sourceTree = "<group>"; };
-		AFEC579215A49AA30006D696 /* MoreAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreAppViewController.xib; sourceTree = "<group>"; };
 		AFEC57A215A4B0830006D696 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		AFEC57A915A4B8550006D696 /* View_Info_backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = View_Info_backBtn.png; sourceTree = "<group>"; };
 		AFEC57AA15A4B8550006D696 /* View_Info_backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "View_Info_backBtn@2x.png"; sourceTree = "<group>"; };
@@ -2219,10 +2204,6 @@
 				2609D3A618057C240019C242 /* XCInfoViewController.m */,
 				2644C6261816A31400CF1482 /* ParentalGateValidator.h */,
 				2644C6271816A31400CF1482 /* ParentalGateValidator.m */,
-				2644C62A1816A32600CF1482 /* AboutUsValidator.h */,
-				2644C62B1816A32600CF1482 /* AboutUsValidator.m */,
-				2644C62E1816A33600CF1482 /* MoreAppValidator.h */,
-				2644C62F1816A33600CF1482 /* MoreAppValidator.m */,
 				26DF2119180567510082B196 /* MoreApp.h */,
 				26DF211A180567510082B196 /* MoreApp.m */,
 				2609D3AA18058BBF0019C242 /* infoImages */,
@@ -2501,9 +2482,6 @@
 				57FC41FD1583DDD8001221F2 /* XCChooseViewController.h */,
 				57FC41FE1583DDD8001221F2 /* XCChooseViewController.m */,
 				57FC41FF1583DDD8001221F2 /* XCChooseViewController.xib */,
-				AFEC579015A49AA30006D696 /* MoreAppViewController.h */,
-				AFEC579115A49AA30006D696 /* MoreAppViewController.m */,
-				AFEC579215A49AA30006D696 /* MoreAppViewController.xib */,
 				AF06635D15A8AD2300CDE1C6 /* IAPViewController.h */,
 				AF06635E15A8AD2300CDE1C6 /* IAPViewController.m */,
 				AF06635F15A8AD2300CDE1C6 /* IAPViewController.xib */,
@@ -3697,7 +3675,6 @@
 				AF33511F159A25DB007F3CF3 /* triangle_lion0.png in Resources */,
 				AF335120159A25DB007F3CF3 /* triangle_lion1.png in Resources */,
 				AF335121159A25DB007F3CF3 /* View_NCS_S_Play_BG.png in Resources */,
-				AFEC579515A49AA30006D696 /* MoreAppViewController.xib in Resources */,
 				AFEC57B915A4B8550006D696 /* View_Info_backBtn.png in Resources */,
 				AFEC57BB15A4B8550006D696 /* View_Info_backBtn@2x.png in Resources */,
 				AFEC57BD15A4B8550006D696 /* View_info_BG.jpg in Resources */,
@@ -4241,7 +4218,6 @@
 				AF51EF77159DF12E00675159 /* triangle_lion0.png in Resources */,
 				AF51EF78159DF12E00675159 /* triangle_lion1.png in Resources */,
 				AF51EF79159DF12E00675159 /* View_NCS_S_Play_BG.png in Resources */,
-				AFEC579615A49AA30006D696 /* MoreAppViewController.xib in Resources */,
 				AFEC57BA15A4B8550006D696 /* View_Info_backBtn.png in Resources */,
 				AFEC57BC15A4B8550006D696 /* View_Info_backBtn@2x.png in Resources */,
 				AFEC57BE15A4B8550006D696 /* View_info_BG.jpg in Resources */,
@@ -4577,7 +4553,6 @@
 				AF13472C158FCE690053BFF2 /* UIAlertView+Extras.m in Sources */,
 				AF13472D158FCE690053BFF2 /* UIButton+Extras.m in Sources */,
 				AF13472E158FCE690053BFF2 /* UIColor+Extras.m in Sources */,
-				2644C6301816A33600CF1482 /* MoreAppValidator.m in Sources */,
 				AF13472F158FCE690053BFF2 /* UIImage+Extras.m in Sources */,
 				AF134730158FCE690053BFF2 /* UINavigationBar+CustomBG.m in Sources */,
 				26FA337718043E620028F104 /* AdView.m in Sources */,
@@ -4609,7 +4584,6 @@
 				AFCBE264159379EC00233D9C /* ControlView.m in Sources */,
 				2644C6281816A31400CF1482 /* ParentalGateValidator.m in Sources */,
 				AF8616A9159398CB0073AECC /* Sprite.m in Sources */,
-				2644C62C1816A32600CF1482 /* AboutUsValidator.m in Sources */,
 				AF3B7048159768730085D98D /* CTestDuckView.m in Sources */,
 				AF1880A2159840E400572BC4 /* CirclePlayView.m in Sources */,
 				AF1880AA15984C6600572BC4 /* DiamondPlayView.m in Sources */,
@@ -4628,7 +4602,6 @@
 				2609D3A718057C240019C242 /* XCInfoViewController.m in Sources */,
 				AF06BCF31599BEAB00343AE1 /* AnimationiManager.m in Sources */,
 				AF0EEE7D159EFA1900114E67 /* MyStoreObserver.m in Sources */,
-				AFEC579315A49AA30006D696 /* MoreAppViewController.m in Sources */,
 				AFEC57F615A4CFDD0006D696 /* Facebook.m in Sources */,
 				AFEC57FA15A4CFDD0006D696 /* FBDialog.m in Sources */,
 				AFEC57FC15A4CFDD0006D696 /* FBFrictionlessRequestSettings.m in Sources */,
@@ -4676,7 +4649,6 @@
 				AF51EDFA159DF12E00675159 /* UIAlertView+Extras.m in Sources */,
 				AF51EDFB159DF12E00675159 /* UIButton+Extras.m in Sources */,
 				AF51EDFC159DF12E00675159 /* UIColor+Extras.m in Sources */,
-				2644C6311816A33600CF1482 /* MoreAppValidator.m in Sources */,
 				AF51EDFD159DF12E00675159 /* UIImage+Extras.m in Sources */,
 				AF51EDFE159DF12E00675159 /* UINavigationBar+CustomBG.m in Sources */,
 				26FA337818043E620028F104 /* AdView.m in Sources */,
@@ -4708,7 +4680,6 @@
 				AF51EE16159DF12E00675159 /* ControlView.m in Sources */,
 				2644C6291816A31400CF1482 /* ParentalGateValidator.m in Sources */,
 				AF51EE17159DF12E00675159 /* Sprite.m in Sources */,
-				2644C62D1816A32600CF1482 /* AboutUsValidator.m in Sources */,
 				AF51EE19159DF12E00675159 /* CTestDuckView.m in Sources */,
 				AF51EE1A159DF12E00675159 /* CirclePlayView.m in Sources */,
 				AF51EE1C159DF12E00675159 /* DiamondPlayView.m in Sources */,
@@ -4727,7 +4698,6 @@
 				2609D3A818057C240019C242 /* XCInfoViewController.m in Sources */,
 				AF51EE27159DF12E00675159 /* AnimationiManager.m in Sources */,
 				AF0EEE81159F111600114E67 /* MyStoreObserver.m in Sources */,
-				AFEC579415A49AA30006D696 /* MoreAppViewController.m in Sources */,
 				AFEC57F715A4CFDD0006D696 /* Facebook.m in Sources */,
 				AFEC57FB15A4CFDD0006D696 /* FBDialog.m in Sources */,
 				AFEC57FD15A4CFDD0006D696 /* FBFrictionlessRequestSettings.m in Sources */,
@@ -4903,7 +4873,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = KidsGames_FREE;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E0420BE7-9D6D-4D3B-AA93-F6C49A0441F0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB4F94CD-8B17-4B08-B060-8EFD129E442D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

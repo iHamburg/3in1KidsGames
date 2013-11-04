@@ -43,10 +43,10 @@
 - (void)facebook;
 - (void)email;
 - (void)supportEmail;
+- (void)appstore;
 
-- (void)selectApp:(MoreApp*)app;
+//- (void)selectApp:(MoreApp*)app;
 
-- (void)showParentalGate;
 
 @end
 

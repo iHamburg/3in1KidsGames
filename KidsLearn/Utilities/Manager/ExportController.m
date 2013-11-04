@@ -300,6 +300,7 @@
 - (void)linkToAppStoreWithID:(NSString*)appID{
     NSString *urlStr =[NSString stringWithFormat:@"https://itunes.apple.com/us/app/id%@?mt=8",appID];
 	
+    NSLog(@"app url # %@",urlStr);
 	NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 
    

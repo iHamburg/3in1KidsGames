@@ -11,27 +11,35 @@
 
 @implementation ParentalGateValidator
 
-- (id)initWithViewController:(UIViewController*)vc{
-    if (self = [self init]) {
-        
-    }
-    
-    return self;
-}
+@synthesize completionHandler;
+//
+//- (id)initWithViewController:(UIViewController*)vc{
+//    if (self = [self init]) {
+//        
+//    }
+//    
+//    return self;
+//}
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
     NSLog(@"buttonIndex # %d",buttonIndex);
     if (buttonIndex == 1) {
         NSString *text = [[alertView textFieldAtIndex:0] text];
+        
+        BOOL completed;
+        
         if ([text intValue] == sum) {
             NSLog(@"solved");
+            completed = YES;
+
             
-            [self execute];
         }
         else{
             NSLog(@"wrong answer");
-
+            completed = NO;
         }
+        
+        completionHandler(completed);
     }
 }
 
@@ -50,7 +58,7 @@
     
 }
 
-- (void)execute{
-    
-}
+//- (void)execute{
+//    
+//}
 @end

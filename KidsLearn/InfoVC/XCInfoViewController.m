@@ -77,7 +77,6 @@
 	
     //	[self.view addSubview:instructionB];
     
-//	[self.view addSubview:facebookB];
 	[self.view addSubview:supportB];
 	[self.view addSubview:recommendB];
 	[self.view addSubview:aboutB];
@@ -204,10 +203,5 @@
 	
     [[FBViewController sharedInstance]feed];
 }
-//
-//- (void)appstore{
-//    L();
-//     MoreApp *app = moreApps[selectedIndex];
-//    [[ExportController sharedInstance]linkToAppStoreWithID:app.fAppid];
-//}
+
 @end

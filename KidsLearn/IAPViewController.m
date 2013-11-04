@@ -28,6 +28,8 @@
 - (IBAction)buttonClicked:(id)sender{
 	L();
 	
+    validator = [[ParentalGateValidator alloc] init];
+    
 	if (sender == homeB) {
 		[self.view removeFromSuperview];
 		[rootVC viewDidAppear:YES];
@@ -37,14 +39,30 @@
 
 		[[AudioController sharedInstance]playSound:AudioButton];
 		[[LoadingView sharedLoadingView]addInView:self.view];
-		[[MyStoreObserver sharedInstance]requestProductWithIdendifier:kIAPFullVersion delegate:self];
+        
+        __weak IAPViewController *vc = self;
+        validator.completionHandler = ^(BOOL completed){
+            if (completed) {
+                [[MyStoreObserver sharedInstance]requestProductWithIdendifier:kIAPFullVersion delegate:vc];
+            }
+        };
+        [validator validate];
 
 
 	}
 	else if(sender == restoreB){
 		NSLog(@"restore");
 		[[LoadingView sharedLoadingView]addInView:self.view];
-		[[MyStoreObserver sharedInstance]checkRestoredItemsWithDelegate:self];
+		
+        
+        __weak IAPViewController *vc = self;
+        validator.completionHandler = ^(BOOL completed){
+            if (completed) {
+                [[MyStoreObserver sharedInstance]checkRestoredItemsWithDelegate:vc];
+            }
+        };
+        [validator validate];
+
 	}
 }
 
